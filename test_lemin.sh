@@ -37,7 +37,7 @@ test_errors1()
 
 test_errors2()
 {
-	for i in {25..48}
+	for i in {25..49}
 	do
 		printf "\033[34;1m./lem-in < test/test_err%d.map\n\033[0m" $i
 		./lem-in < test/test_err$i.map
@@ -57,7 +57,7 @@ test_valid1()
 
 test_valid2()
 {
-	for i in {16..30}
+	for i in {16..31}
 	do
 		printf "\033[34;1m./lem-in < test/test_%d.map\n\033[0m" $i
 		./lem-in < test/test_$i.map
