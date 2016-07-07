@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #
 # This is a shell script in order to test your lem-in program.
@@ -58,13 +58,15 @@ test_bonus()
 }
 
 # Checking if the program exist. If not: do make.
-if [ ! -f ./lem-in ];
-then
-	make
-fi
+# if [ ! -f ./lem-in ];
+# then
+# 	make
+# fi
 
 # Ask the user which test to launch.
 while true; do
+	title="LEM-IN TESTS"
+	printf "%*s\n" $(($COLUMNS/2)) "$title"
 	echo "\033[34;1mChoose a test:\n
 		[1]\tValids from 1 to 15\n
 		[2]\tValids from 16 to 31\n
