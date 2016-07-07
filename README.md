@@ -9,6 +9,6 @@ In order to test your own program:
 $ sh test/test_lemin.sh
 ```
 
-Maps by courtesy of [tbouder](https://github.com/TBouder/lem-in_test).
+Some maps by courtesy of [tbouder](https://github.com/TBouder/lem-in_test).
 
 Enjoy!
