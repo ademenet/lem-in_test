@@ -84,10 +84,9 @@ test_bonus()
 # 	make
 # fi
 
-# Ask the user which test to launch.
+Ask the user which test to launch.
 while true; do
 	title="LEM-IN TESTS"
-	printf "%*s\n" $(($COLUMNS/2)) "$title"
 	echo "\033[34;1mChoose a test:\n
 		[1]\tAnt size\n
 		[2]\tCommands\n
