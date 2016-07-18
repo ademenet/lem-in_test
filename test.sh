@@ -78,29 +78,51 @@ test_bonus()
 	echo '-----'
 }
 
+test_preliminaires()
+{
+	printf "Check du fichier auteur :"
+	FILE=auteur
+	if [ -f $FILE ]
+	then
+		cat -e auteur
+	else
+		echo "Pas de fichier auteur... :-("
+	fi
+	printf "Check de la norme :"
+	if grep -q "Error" | norminette */*[hc]; then
+	    echo "Fautes"
+	else
+	    echo "okay"
+	fi
+}
+
+test_norooms()
+{
+
+}
+
 # Checking if the program exist. If not: do make.
-# if [ ! -f ./lem-in ];
-# then
-# 	make
-# fi
+if [ ! -f ./lem-in ];
+then
+	make
+fi
 
 Ask the user which test to launch.
 while true; do
-	title="LEM-IN TESTS"
-	echo "\033[34;1mChoose a test:\n
-		[1]\tAnt size\n
-		[2]\tCommands\n
-		[3]\tComments\n
-		[4]\tRandom valids 1st part\n
-		[6]\tRandom valids 2nd part\n
-		[5-i]\tBig with i from 1 to 11\n
-		[b]\tSee bonuses\n
+	echo "\033[34;1mChoisi un test :\n
+		[1]\tPreliminaires\n
+		[2]\tAucune salle\n
+		[3]\tAucune fourmi\n
+		[4]\tAucun commentaire obligatoire\n
+		[5]\tAucun chemin possible\n
+		[6]\tCommandes\n
+		[b]\tBonus\n
 		[q]\tQuit\n
 		\033[0m"
 	read tests
 	case $tests in
-		"1" )		test_antsize ;;
-		"2" )		test_cmd ;;
+		"1" )		test_preliminaires ;;
+		"2" )		test_norooms ;;
 		"3" )		test_comment ;;
 		"4" )		test_valid1 ;;
 		"6" )		test_valid2 ;;
